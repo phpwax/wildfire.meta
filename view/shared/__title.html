@@ -1,0 +1,7 @@
+<?
+$title = "";
+if(!$separator) $separator = " - ";
+foreach($content_object_stack as $obj) $title = $obj->title . $separator . $title;
+$title .= $site_name;
+?>
+<?=trim($title)?>
