@@ -6,3 +6,12 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <?endif?>
+<?if($cms_content && $cms_content->primval):?>
+<meta name="keywords" content="<?if($cms_content->meta_keywords):?><?=$cms_content->meta_keywords?><?else:?><?=keywords($cms_content, "title", 15)?><?endif?>">
+<meta name="description" content="<?if($cms_content->meta_description):?><?=$cms_content->meta_description?><?else:?><?=description($cms_content, "content", 25)?><?endif?>">
+<?else:?>
+<meta name="keywords" content="<?=$keywords?>">
+<meta name="description" content="<?=$description?>">
+<?endif?>
+
+<link rel="shortcut icon" href="/favicon.ico" />
