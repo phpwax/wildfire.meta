@@ -4,5 +4,5 @@ Provides title & common meta tag
 
 Example use:
 
-<?=partial("__meta", array('keywords'=>'test, testing', 'description'=>'testing this website', content_object_stack'=>$content_object_stack, 'cms_language_id'=>$cms_language_id,'cms_content'=>$cms_content, 'mobile'=>array('initial-scale'=>1, 'maximum-scale'=>1, 'user-scalable'=>'no')));?>
+<?=partial("__meta", array('keywords'=>'test, testing', 'description'=>'testing this website', 'content_object_stack'=>$content_object_stack, 'cms_language_id'=>$cms_language_id,'cms_content'=>$cms_content, 'mobile'=>array('initial-scale'=>1, 'maximum-scale'=>1, 'user-scalable'=>'no')));?>
 <title><?=partial("__title", array('content_object_stack'=>$content_object_stack, 'site_name'=>'Website'))?></title>
