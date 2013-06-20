@@ -1,7 +1,10 @@
 <?
 $title = "";
-if(!$separator) $separator = " - ";
-foreach($content_object_stack as $obj) $title = strip_tags($obj->title) . $separator . $title;
-$title .= $site_name;
+$end = array_pop(array_reverse($content_object_stack));
+if(!$title = $end->meta_title){
+  if(!$separator) $separator = " - ";
+  foreach($content_object_stack as $obj) $title = strip_tags($obj->title) . $separator . $title;
+  $title .= $site_name;
+}
 ?>
 <?=trim($title)?>
